@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:feedback_app/quiz.dart';
 import 'package:feedback_app/result.dart';
-import 'package:feedback_app/question.dart';
+
 
 void main() {
   runApp(MaterialApp(
@@ -115,9 +115,9 @@ class _MaterialAppState extends State<MaterialApp> {
       body: Padding(
         padding: const EdgeInsets.fromLTRB(50.0, 30.0, 50.0, 30.0),
         child: (_index < ques.length) ? Quiz(
-          answerQuestion: feedbackResponse,
-          questionIndex: _index,
-          questions: ques,
+          answerQues: feedbackResponse,
+          index: _index,
+          ques: ques,
         ) //Quiz
          : Result(_scoreTotal, _reset),
       ),
