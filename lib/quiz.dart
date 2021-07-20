@@ -42,6 +42,11 @@ class Quiz extends StatelessWidget {
               height: 10,
             ),
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  primary: Colors.redAccent,
+                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                  textStyle:
+                      TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
               child: Text('Next'),
               onPressed: () => answerQues(currentFeedbackValue),
             ),

@@ -38,33 +38,40 @@ class Result extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 500,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            "Score $resultScore:\n ",
-            style: TextStyle(
-                fontSize: 36,
-                fontWeight: FontWeight.bold,
-                color: finResults['rColor']),
-            textAlign: TextAlign.center,
-          ), //Text
-          SizedBox(
-            height: 10.0,
-          ),
-          Text(
-            finResults['rText'],
-            style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
-            textAlign: TextAlign.center,
-          ), //Text
-          FloatingActionButton(
-            child: Text('Gib Feedback Again'),
-            onPressed: () => resetHandler,
-          ),
-        ], //<Widget>[]
-      ), //Column
+    return Scaffold(
+      body: Container(
+        height: 500,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              "Score $resultScore:\n ",
+              style: TextStyle(
+                  fontSize: 36,
+                  fontWeight: FontWeight.bold,
+                  color: finResults['rColor']),
+              textAlign: TextAlign.center,
+            ), //Text
+            SizedBox(
+              height: 10.0,
+            ),
+            Text(
+              finResults['rText'],
+              style: TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                  color: finResults['rColor']),
+              textAlign: TextAlign.center,
+            ), //Text
+          ], //<Widget>[]
+        ), //Column
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        label: Text('Gib Feedback Again'),
+        backgroundColor: Colors.redAccent,
+        splashColor: Colors.red[00],
+        onPressed: () => resetHandler,
+      ),
     ); //Center
   }
 }
