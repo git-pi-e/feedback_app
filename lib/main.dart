@@ -46,7 +46,7 @@ class _FeedbackState extends State<Feedback> {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.redAccent,
-          title: Text('Gib Feuedback'),
+          title: Text('Gib Feedback UwU'),
         ),
         body : (_index < ques.length) 
         ? Quiz(ques: ques, answerQues: feedbackResponse, index: _index) 

@@ -30,7 +30,7 @@ class Result extends StatelessWidget {
   Map<String, dynamic> get finResults {
     var finalResult;
     scores.forEach((element) {
-      if (resultScore <= element['max'] && resultScore >= element['min'])
+      if (resultScore >= element['min'] && resultScore <= element['max'])
         finalResult = element;
     });
     return finalResult;
