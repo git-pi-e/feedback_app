@@ -61,7 +61,7 @@ class Result extends StatelessWidget {
           ), //Text
           FloatingActionButton(
             child: Text('Gib Feedback Again'),
-            onPressed: resetHandler(),
+            onPressed: () => resetHandler,
           ),
         ], //<Widget>[]
       ), //Column
