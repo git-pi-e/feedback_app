@@ -28,7 +28,7 @@ class _AnswerState extends State<Answer> {
         Slider(
           min: 1,
           max: 5,
-          divisions: 5,
+          divisions: 4,
           label: '$sliderVal',
           activeColor: Colors.redAccent,
           inactiveColor: Colors.grey,
@@ -41,4 +41,3 @@ class _AnswerState extends State<Answer> {
     ); //RaisedButton
   }
 }
-
