@@ -11,7 +11,7 @@ class Answer extends StatefulWidget {
 }
 
 class _AnswerState extends State<Answer> {
-  int sliderVal = 0;
+  int sliderVal = 1;
 
   void setSliderValue(double value) {
     setState(() {
@@ -29,13 +29,13 @@ class _AnswerState extends State<Answer> {
           min: 1,
           max: 5,
           divisions: 4,
+          value: sliderVal.toDouble(),
           label: '$sliderVal',
           activeColor: Colors.redAccent,
           inactiveColor: Colors.grey,
           onChanged: (value) {
             setSliderValue(value);
           },
-          value: sliderVal.toDouble(),
         ),
       ],
     ); //RaisedButton
