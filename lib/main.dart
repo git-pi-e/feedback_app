@@ -51,7 +51,9 @@ class _FeedbackState extends State<Feedback> {
         body : (_index < ques.length) 
         ? Quiz(ques: ques, answerQues: feedbackResponse, index: _index) 
         : Center(
-          child: Result(_scoreTotal, _reset),
+          child:
+            Result(_scoreTotal, _reset),
+
           ),
           ),
       );

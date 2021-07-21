@@ -22,40 +22,38 @@ class _AnswerState extends State<Answer> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Text('$sliderVal'),
-        SliderTheme(
-          data: SliderTheme.of(context).copyWith(
-            activeTrackColor: Colors.redAccent[400],
-            inactiveTrackColor: Colors.redAccent[200],
-            trackShape: RoundedRectSliderTrackShape(),
-            trackHeight: 4.0,
-            thumbShape: RoundSliderThumbShape(enabledThumbRadius: 12.0),
-            thumbColor: Colors.redAccent,
-            overlayColor: Colors.red.withAlpha(32),
-            overlayShape: RoundSliderOverlayShape(overlayRadius: 28.0),
-            tickMarkShape: RoundSliderTickMarkShape(),
-            activeTickMarkColor: Colors.red[700],
-            inactiveTickMarkColor: Colors.red[200],
-            valueIndicatorShape: PaddleSliderValueIndicatorShape(),
-            valueIndicatorColor: Colors.redAccent,
-            valueIndicatorTextStyle: TextStyle(
-              color: Colors.white,
-            ),
-          ),
-          child: Slider(
-            min: 1,
-            max: 5,
-            divisions: 4,
-            value: sliderVal.toDouble(),
-            label: '$sliderVal',
-            onChanged: (value) {
-              setSliderValue(value);
-            },
-          ),
-        ),
-      ],
+    return Center(
+           child: SliderTheme(
+             data: SliderTheme.of(context).copyWith(
+               activeTrackColor: Colors.redAccent[400],
+               inactiveTrackColor: Colors.redAccent[100],
+               trackShape: RoundedRectSliderTrackShape(),
+               trackHeight: 4.0,
+               thumbShape: RoundSliderThumbShape(enabledThumbRadius: 12.0),
+               thumbColor: Colors.redAccent,
+               overlayColor: Colors.red.withAlpha(32),
+               overlayShape: RoundSliderOverlayShape(overlayRadius: 38.0),
+               tickMarkShape: RoundSliderTickMarkShape(),
+               activeTickMarkColor: Colors.red[700],
+               inactiveTickMarkColor: Colors.red[200],
+               valueIndicatorShape: PaddleSliderValueIndicatorShape(),
+               valueIndicatorColor: Colors.redAccent,
+               valueIndicatorTextStyle: TextStyle(
+                 color: Colors.white,
+               ),
+             ),
+             child: Slider(
+              min: 1,
+              max: 5,
+              divisions: 4,
+              value: sliderVal.toDouble(),
+              label: '$sliderVal',
+              onChanged: (value) {
+                setSliderValue(value);
+              },
+             ),
+           ),
+
     ); //RaisedButton
   }
 }
