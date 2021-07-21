@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 
-class Result extends StatelessWidget {
+class Result extends StatefulWidget {
   final int resultScore;
   final Function resetHandler;
 
   Result(this.resultScore, this.resetHandler);
 
+  @override
+  _ResultState createState() => _ResultState();
+}
+
+class _ResultState extends State<Result> {
   final List<Map<String, dynamic>> scores = [
     {
       'max': 10,
@@ -30,7 +35,7 @@ class Result extends StatelessWidget {
   Map<String, dynamic> get finResults {
     var finalResult;
     scores.forEach((element) {
-      if (resultScore >= element['min'] && resultScore <= element['max'])
+      if (widget.resultScore >= element['min'] && widget.resultScore <= element['max'])
         finalResult = element;
     });
     return finalResult;
@@ -45,7 +50,7 @@ class Result extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              "Score $resultScore:\n ",
+              "Score ${widget.resultScore}:\n ",
               style: TextStyle(
                   fontSize: 36,
                   fontWeight: FontWeight.bold,
@@ -70,7 +75,7 @@ class Result extends StatelessWidget {
         label: Text('Gib Feedback Again'),
         backgroundColor: Colors.redAccent,
         splashColor: Colors.red[00],
-        onPressed: () => resetHandler,
+        onPressed: () => widget.resetHandler,
       ),
     ); //Center
   }

@@ -24,7 +24,9 @@ class _FeedbackState extends State<Feedback> {
     setState(() {
       _scoreTotal = 0;
       _index = 0;
+
     });
+    print('$_index is Index, $_scoreTotal is total score');
   }
 
   void feedbackResponse(int score) {
@@ -34,7 +36,7 @@ class _FeedbackState extends State<Feedback> {
     });
     print(_scoreTotal);
     if (_index < ques.length) {
-      print('Nexto Questio!');
+      print('Nexto Questio!, tis $_index\'th que ');
     } else {
       print('That\'s all folks!');
     }
