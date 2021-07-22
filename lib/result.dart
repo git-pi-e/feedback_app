@@ -35,8 +35,8 @@ class _ResultState extends State<Result> {
   Map<String, dynamic> get finResults {
     var finalResult;
     scores.forEach((element) {
-      if (widget.resultScore >= element['min'] && widget.resultScore <= element['max'])
-        finalResult = element;
+      if (widget.resultScore >= element['min'] &&
+          widget.resultScore <= element['max']) finalResult = element;
     });
     return finalResult;
   }
@@ -75,7 +75,7 @@ class _ResultState extends State<Result> {
         label: Text('Gib Feedback Again'),
         backgroundColor: Colors.redAccent,
         splashColor: Colors.red[00],
-        onPressed: () => widget.resetHandler,
+        onPressed: () => widget.resetHandler(),
       ),
     ); //Center
   }
